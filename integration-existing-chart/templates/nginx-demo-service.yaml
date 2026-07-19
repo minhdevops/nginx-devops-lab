@@ -1,0 +1,19 @@
+{{- if .Values.nginxDemo.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-nginx-demo
+  labels:
+    app.kubernetes.io/name: nginx-demo
+    app.kubernetes.io/instance: {{ .Release.Name }}
+spec:
+  type: {{ .Values.nginxDemo.service.type }}
+  selector:
+    app.kubernetes.io/name: nginx-demo
+    app.kubernetes.io/instance: {{ .Release.Name }}
+  ports:
+    - name: http
+      port: {{ .Values.nginxDemo.service.port }}
+      targetPort: http
+{{- end }}
+

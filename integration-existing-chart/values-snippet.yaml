@@ -1,0 +1,26 @@
+# Copy block này vào cuối helm/k8s-lab-webapp/values.yaml
+nginxDemo:
+  enabled: true
+  replicaCount: 1
+  image:
+    repository: dovanminh98/nginx-demo
+    tag: "0.0.1"
+    pullPolicy: IfNotPresent
+  imagePullSecrets: []
+  containerPort: 8080
+  service:
+    type: ClusterIP
+    port: 80
+  ingress:
+    enabled: true
+    className: nginx
+    host: nginx-demo.lab.local
+    path: /
+  resources:
+    requests:
+      cpu: 50m
+      memory: 64Mi
+    limits:
+      cpu: 200m
+      memory: 128Mi
+

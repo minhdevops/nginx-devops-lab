@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nginx Demo | Kubernetes Lab</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="badge"><span></span> Pod đang hoạt động</div>
+      <p class="eyebrow">KUBERNETES DELIVERY LAB</p>
+      <h1>Nginx đã được deploy thành công!</h1>
+      <p class="lead">
+        Trang này đang được phục vụ từ container Nginx và được triển khai bằng
+        Docker, Helm Chart và ArgoCD.
+      </p>
+      <div class="pipeline" aria-label="Luồng triển khai">
+        <div><strong>01</strong><span>Docker</span></div>
+        <i>→</i>
+        <div><strong>02</strong><span>Helm</span></div>
+        <i>→</i>
+        <div><strong>03</strong><span>ArgoCD</span></div>
+        <i>→</i>
+        <div><strong>04</strong><span>Kubernetes</span></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article>
+        <span class="icon">◫</span>
+        <h2>Image</h2>
+        <code>dovanminh98/nginx-demo:0.0.1</code>
+      </article>
+      <article>
+        <span class="icon">⌁</span>
+        <h2>Health check</h2>
+        <code>GET /healthz</code>
+      </article>
+      <article>
+        <span class="icon">◎</span>
+        <h2>Namespace</h2>
+        <code>lab</code>
+      </article>
+    </section>
+
+    <footer>
+      <span>nginx-demo</span>
+      <span>•</span>
+      <span>DevOps practice project</span>
+    </footer>
+  </main>
+</body>
+</html>
+

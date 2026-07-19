@@ -1,0 +1,5 @@
+Nginx demo has been deployed.
+
+Host: http://{{ .Values.ingress.host }}
+Health endpoint: http://{{ .Values.ingress.host }}/healthz
+
