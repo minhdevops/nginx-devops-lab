@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/minhdevops/nginx-demo.git
+    repoURL: https://github.com/minhdevops/nginx-devops-lab.git
     targetRevision: main
     path: helm/nginx-demo
   destination:
